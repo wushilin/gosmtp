@@ -17,12 +17,12 @@ Note port 25, 465 requires ROOT!
 # $GOPATH/bin/gosmtp --tls-cert=cert.pem --tls-key=cert.key --port=25 --secure-port=465 --save-to mails --bind "" --max-body-size=100000000 --max-header-size=100000 --max-recipient-size=1000000 --verbose=true
 ```
 
-## Running only plaintext
+## Running only plaintext (port 25)
 ```bash
 # $GOPATH/bin/gosmtp
 ```
 
-## Running only tls
+## Running only tls (port 465)
 ```bash
 # $GOPATH/bin/gosmtp --tls-cert=cert.pem --tls-key=cert.key --port=-1
 ```
