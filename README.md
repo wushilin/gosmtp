@@ -1,5 +1,7 @@
 # gosmtp
-SMTP server written in GO. It doesn't send mail, but act as a mail server for you to integrate with!
+SMTP server written in GO. It doesn't send mail, it acts like a SMTP, so your program can test integration with SMTP servers.
+
+It stores mails in the "mails" folder by default for viewing.
 
 # Installing
 ```bash
@@ -26,6 +28,12 @@ Note port 25, 465 requires ROOT!
 ```
 
 # Getting certs
-You can use openssl to generate certs your self, or use minica: github.com/wushilin/minica
+The default certs `cert.pem`, `cert.key` is only valid for `127.0.0.1` or `localhost`, they are valid for 20 years from 2022
+
+To get proper CA issued cert, please use let's encrypt (https://www.letsencrypt.org)
+To generate self-signed CA & certs, You can use openssl to generate certs your self.
+
+We recommend you using minica, a free open source graphical CA for the techies. Visit https://github.com/wushilin/minica
+
 
 
